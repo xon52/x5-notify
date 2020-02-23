@@ -3,7 +3,6 @@
 This is a lightweight message, dialog, and modal Vue plugin.
 
 :warning: This plugin is in development, so please let me know if you find any errors.
-&nbsp;&nbsp;
 
 ## Installation
 
@@ -12,16 +11,12 @@ This is a lightweight message, dialog, and modal Vue plugin.
 npm install x5-notify --save
 ```
 
-&nbsp;&nbsp;
-
 ## Deployment
 
 ```js
 import x5Notify from 'x5-notify'
 Vue.use(x5Notify)
 ```
-
-&nbsp;&nbsp;
 
 ## Usage
 
@@ -35,8 +30,6 @@ this.$alert({
   text: 'This is an alert dialog.',
 })
 ```
-
-&nbsp;&nbsp;
 
 ## Options
 
@@ -66,8 +59,6 @@ this.$alert({
 | onClick   | Function |   --    | Callback for clicking on the message                               |
 | wait      |  Number  |   `5`   | Time in seconds before message is destroyed                        |
 
-&nbsp;&nbsp;
-
 ### **`$modal` (options)** _(returns Promise)_
 
 | Attribute |   Type   | Default | Description                                        |
@@ -78,8 +69,6 @@ this.$alert({
 | width     |  Number  |  `500`  | Maximum window width                               |
 | xClass    |  String  |   --    | Extra classes for the window                       |
 | xStyle    |  String  |   --    | Extra styles for the window                        |
-
-&nbsp;&nbsp;
 
 ### **`$alert`, `$confirm`, `$prompt` (options)** _(returns Promise)_
 
@@ -94,12 +83,10 @@ this.$alert({
 | labelOK | String | OK | OK button label |
 | labelCancel | String | Cancel | Cancel button label |
 | rules | Array | `[]` | Array of functions to test prompt input against |
-&nbsp;&nbsp;
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](./CONTRIBUITING.md) for the process for submitting pull requests.
-&nbsp;&nbsp;
+Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for the process for submitting pull requests.
 
 ## Authors
 
@@ -110,7 +97,6 @@ Please read [CONTRIBUTING.md](./CONTRIBUITING.md) for the process for submitting
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-&nbsp;&nbsp;
 
 ## Acknowledgments
 
