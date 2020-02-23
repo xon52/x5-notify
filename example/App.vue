@@ -1,4 +1,3 @@
-
 <template>
   <div class="wrapper">
     <img class="logo" src="./logo.png" />
@@ -39,7 +38,7 @@
 import Vue from "vue"
 import Custom from "./Custom"
 
-import x5Notify from "../dist"
+import x5Notify from "../dist/x5Notify"
 Vue.use(x5Notify)
 
 export default {
