@@ -3,8 +3,7 @@
   "name": "x5-notify",
   "version": "0.1.0",
   "description": "A lightweight message, dialog, and modal Vue plugin",
-  "main": "dist/index.umd.min.js",
-  "style": "dist/index.js.css",
+  "main": "dist/x5Notify.js",
   "scripts": {
     "serve": "npx vue-cli-service serve example/index",
     "build": "webpack",

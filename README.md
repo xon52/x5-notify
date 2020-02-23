@@ -50,7 +50,7 @@ this.$alert({
       rules: this.options.rules,
 
 ### **`$message` (options)** _(returns Promise)_
-![Messages]('./example/img/messages.png')
+![Messages](./example/img/messages.png)
 
 
 | Attribute |   Type   | Default | Description                                                        |
@@ -62,7 +62,7 @@ this.$alert({
 | wait      |  Number  |   `5`   | Time in seconds before message is destroyed                        |
 
 ### **`$modal` (options)** _(returns Promise)_
-![Modal]('./example/img/modal.png')
+![Modal](./example/img/modal.png)
 
 | Attribute |   Type   | Default | Description                                        |
 | :-------- | :------: | :-----: | :------------------------------------------------- |
@@ -74,9 +74,9 @@ this.$alert({
 | xStyle    |  String  |   --    | Extra styles for the window                        |
 
 ### **`$alert`, `$confirm`, `$prompt` (options)** _(returns Promise)_
-![Alert]('./example/img/alert.png')
-![Confirm]('./example/img/confirm.png')
-![Prompt]('./example/img/prompt.png')
+![Alert](./example/img/alert.png)
+![Confirm](./example/img/confirm.png)
+![Prompt](./example/img/prompt.png)
 
 :information_source: These attributes and options extend \$modal's (above)
 | Attribute | Type | Default | Description |
