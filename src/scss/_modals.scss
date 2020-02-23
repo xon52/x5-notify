@@ -1,0 +1,46 @@
+@use "sass:map";
+
+.x5-n-modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  &.x5-n-overlay {
+    z-index: 5;
+    background-color: #0006;
+  }
+
+  .x5-n-modal {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+    transition: all 0.3s ease;
+    width: 100%;
+    overflow: auto;
+    max-width: 500px;
+    position: fixed;
+    max-height: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &.x5-n-attention {
+      animation: shake 150ms;
+    }
+  }
+}
+
+@keyframes shake {
+  14%,
+  70% {
+    transform: translate(-49%, -49%);
+  }
+  28%,
+  56%,
+  84% {
+    transform: translate(-49%, -51%);
+  }
+  42%,
+  98% {
+    transform: translate(-51%, -51%);
+  }
+}

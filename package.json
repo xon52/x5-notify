@@ -1,0 +1,47 @@
+{
+  "private": false,
+  "name": "x5-notify",
+  "version": "0.1.0",
+  "description": "A lightweight message, dialog, and modal Vue plugin",
+  "main": "./dist/index.cjs.js",
+  "scripts": {
+    "serve": "npx vue-cli-service serve example/index",
+    "build": "npx bili"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xon52/x5-notify.git"
+  },
+  "keywords": [
+    "vue",
+    "plugin",
+    "notify",
+    "message",
+    "modal",
+    "dialog",
+    "alert"
+  ],
+  "author": "Keagan Chisnall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xon52/x5-notify/issues"
+  },
+  "homepage": "https://github.com/xon52/x5-notify#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^4.2.2",
+    "bili": "^4.8.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "node-sass": "^4.13.1",
+    "rollup-plugin-vue": "^5.1.6",
+    "sass-loader": "^8.0.2",
+    "vue-loader": "^15.9.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "peerdependencies": {
+    "vue": "^2.6.11"
+  }
+}
