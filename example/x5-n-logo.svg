@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <metadata>
+        <rdf:RDF>
+            <cc:Work rdf:about="">
+                <dc:format>
+                    image/svg+xml
+                </dc:format>
+                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+                <dc:title/>
+            </cc:Work>
+        </rdf:RDF>
+    </metadata>
+    <g transform="translate(0,-1)">
+        <ellipse cx="150.5" cy="151.11" rx="146.89" ry="146.28" fill="none" stroke="#0086f6" stroke-width="7.5434"/>
+        <g transform="translate(5e-7 -1.9175)" fill="#0086ff" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="x5">
+            <path d="m144.66 192.52h-20.256l-27.093-36.665-27.264 36.665h-18.717l37.263-47.605-36.921-47.861h20.256l26.922 36.067 27.007-36.067h18.803l-37.52 47.007z"/>
+            <path d="m248.67 152.1q0 8.8885-3.2477 17.008t-8.8885 13.675q-6.1536 5.9826-14.7 9.2304-8.4612 3.1623-19.657 3.1623-10.427 0-20.085-2.2221-9.6577-2.1367-16.324-5.2134v-18.033h1.1965q7.0082 4.4443 16.41 7.6065 9.4013 3.0768 18.461 3.0768 6.0681 0 11.709-1.7093 5.7262-1.7093 10.171-5.9826 3.7605-3.6751 5.6408-8.803 1.9657-5.128 1.9657-11.88 0-6.5809-2.3076-11.111-2.2221-4.5297-6.239-7.2646-4.4443-3.2477-10.854-4.5297-6.3245-1.3675-14.187-1.3675-7.521 0-14.529 1.0256-6.9228 1.0256-11.965 2.0512v-65.553h76.578v14.957h-60.083v33.845q3.6751-0.34187 7.521-0.5128 3.846-0.17093 6.6664-0.17093 10.341 0 18.119 1.7948 7.7774 1.7093 14.273 6.1536 6.8373 4.7007 10.598 12.136t3.7605 18.632z"/>
+        </g>
+        <text x="44.522629" y="240.24123" fill="#0086ff" font-family="Michroma" font-size="49.584px" letter-spacing="0px" stroke-width="1.2396" word-spacing="0px" style="line-height:1.25" xml:space="preserve">
+            <tspan x="44.522629" y="240.24123" fill="#0086ff" stroke-width="1.2396">Notify</tspan>
+        </text>
+    </g>
+</svg>

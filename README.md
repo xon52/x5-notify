@@ -50,8 +50,8 @@ this.$alert({
       rules: this.options.rules,
 
 ### **`$message` (options)** _(returns Promise)_
-![Messages](./example/img/messages.png)
 
+![Messages](./example/img/messages.png)
 
 | Attribute |   Type   | Default | Description                                                        |
 | :-------- | :------: | :-----: | :----------------------------------------------------------------- |
@@ -62,6 +62,7 @@ this.$alert({
 | wait      |  Number  |   `5`   | Time in seconds before message is destroyed                        |
 
 ### **`$modal` (options)** _(returns Promise)_
+
 ![Modal](./example/img/modal.png)
 
 | Attribute |   Type   | Default | Description                                        |
@@ -74,6 +75,7 @@ this.$alert({
 | xStyle    |  String  |   --    | Extra styles for the window                        |
 
 ### **`$alert`, `$confirm`, `$prompt` (options)** _(returns Promise)_
+
 ![Alert](./example/img/alert.png)
 ![Confirm](./example/img/confirm.png)
 ![Prompt](./example/img/prompt.png)
@@ -97,8 +99,6 @@ Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for the process for submitting 
 ## Authors
 
 - **Keagan Chisnall** - [xon52](https://github.com/xon52)
-  <!-- See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project. -->
-  &nbsp;&nbsp;
 
 ## License
 
@@ -106,8 +106,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-Inspired by:
+**Inspired by:**
 
 - The look and feel of [alertifyJS](https://alertifyjs.com/)
 - The size and code of [vue-toast-notification](https://github.com/ankurk91/vue-toast-notification) by @ankurk91
-  &nbsp;&nbsp;

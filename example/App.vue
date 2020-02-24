@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <img class="logo" src="./logo.png" />
+    <img class="logo" src="./x5-n-logo.svg" width="300" />
     <h1 class="title">x5-Notify Example</h1>
     <!-- Messages -->
     <h2>Messages</h2>
@@ -38,7 +38,7 @@
 import Vue from "vue"
 import Custom from "./Custom"
 
-import x5Notify from "../dist/x5Notify"
+import x5Notify from "../dist"
 Vue.use(x5Notify)
 
 export default {

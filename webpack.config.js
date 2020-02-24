@@ -6,9 +6,9 @@ const path = require('path')
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'x5Notify.js',
+    filename: 'index.js',
     libraryTarget: 'umd',
-    library: 'x5Notify',
+    library: 'x5-notify',
   },
   module: {
     rules: [
