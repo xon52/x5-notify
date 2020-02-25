@@ -2,94 +2,51 @@
   <div class="wrapper">
     <img class="logo" src="./x5-n-logo.svg" width="300" />
     <h1 class="title">x5-Notify Example</h1>
-    <!-- Messages -->
-    <h2>Messages</h2>
     <div class="row">
-      <label for="message-text-input">Text for Messages:</label>
-      <input id="message-text-input" v-model="messageText" />
+      <textarea id="text-input" v-model="text" rows="2" cols="40"></textarea>
     </div>
     <div class="row">
-      <template v-for="type in messageTypes">
-        <button :key="type" class="button" @click="message(type)">{{type}}</button>
+      <template v-for="type in types">
+        <button :key="type" class="button" @click="notify(type)">{{type}}</button>
       </template>
     </div>
-    <!-- Dialogs -->
-    <h2>Dialogs</h2>
-    <div class="row">
-      <label for="dialog-text-input">Text for Dialogs:</label>
-      <input id="dialog-text-input" v-model="dialogText" />
-    </div>
-    <div class="row">
-      <label for="dialog-title-input">Title for Dialogs:</label>
-      <input id="dialog-title-input" v-model="dialogTitle" />
-    </div>
-    <div class="row">
-      <button class="button" @click="alert">Alert</button>
-      <button class="button" @click="confirm">Confirm</button>
-      <button class="button" @click="prompt">Prompt</button>
-    </div>
-    <!-- Custom Modal -->
-    <h2>Custom Modal</h2>
-    <button class="button" @click="custom">Open</button>
+    <div class="line">------------------------</div>
+    <!-- Extra -->
+    <h2>Callbacks</h2>
+    <p>This button calls back another everytime you close it.</p>
+    <p>A notice has callback properties for onClick() and onClose() events.</p>
+    <button class="button" @click="start">Start</button>
+    <button :disabled="stop" class="button" @click="stop=true">Stop</button>
+    <h5>You can click start a few times for a show.</h5>
   </div>
 </template>
 
 <script>
-import Vue from "vue"
-import Custom from "./Custom"
-
-import x5Notify from "../dist"
-Vue.use(x5Notify)
-
 export default {
   data: () => ({
-    messageText: "Some message text",
-    dialogText: "You are about to do something that needs some thought.",
-    dialogTitle: "This is an example title",
-    messageTypes: ["success", "warning", "error", "info", "special", "default"]
+    text: "This is some example text you can change.",
+    types: ["success", "warning", "error", "info", "special", "default"],
+    stop: true
   }),
   methods: {
-    message(type) {
-      this.$message({
+    notify(type) {
+      this.$notify({
         type,
-        text: this.messageText ? `${this.messageText}` : type
+        text: this.text ? `${this.text}` : type
       })
     },
-    alert() {
-      this.$alert({
-        title: `${this.dialogTitle}`,
-        text: `${this.dialogText}`
-      }).then(res => {
-        if (res) this.$message({ type: "success", text: "You pressed OK" })
-        else this.$message({ type: "error", text: "You cancelled" })
+    loop() {
+      if (this.stop) return
+      this.$notify({
+        type: this.types[Math.floor(Math.random() * this.types.length)],
+        text: "Repeating",
+        wait: 1,
+        onClose: this.loop
       })
     },
-    confirm() {
-      this.$confirm({
-        title: `${this.dialogTitle}`,
-        text: `${this.dialogText}`
-      }).then(res => {
-        if (res) this.$message({ type: "info", text: "You pressed OK" })
-        else this.$message({ type: "warning", text: "You cancelled" })
-      })
-    },
-    prompt() {
-      this.$prompt({
-        title: `${this.dialogTitle}`,
-        text: `${this.dialogText}`,
-        rules: [v => (v && v.length > 3) || "Length must be >3."],
-        permanent: true
-      }).then(res => {
-        if (res) this.$message({ type: "special", text: res })
-        else this.$message({ type: "error", text: "You cancelled" })
-      })
-    },
-    custom() {
-      this.$modal(Custom, {
-        permanent: true
-      }).then(res => {
-        if (res) this.$message({ type: "special", text: res })
-      })
+    start() {
+      this.stop = false
+      this.loop()
     }
   }
 }
@@ -99,11 +56,11 @@ export default {
 .wrapper {
   text-align: center;
 }
-label {
-  margin-right: 10px;
-}
 .row {
   margin-bottom: 10px;
+}
+.line {
+  margin: 30px 0;
 }
 button {
   padding: 10px;

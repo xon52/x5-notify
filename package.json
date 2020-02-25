@@ -1,11 +1,11 @@
 {
   "private": false,
   "name": "x5-notify",
-  "version": "0.1.0",
-  "description": "A lightweight message, dialog, and modal Vue plugin",
-  "main": "dist/x5Notify.js",
+  "version": "0.2.0",
+  "description": "A lightweight notice plugin for Vue",
+  "main": "dist",
   "scripts": {
-    "serve": "npx vue-cli-service serve example/index",
+    "serve": "npx vue-cli-service serve example",
     "build": "webpack",
     "build-vue-cli": "npx vue-cli-service build --target lib --filename index.js src/index.js"
   },
@@ -17,10 +17,7 @@
     "vue",
     "plugin",
     "notify",
-    "message",
-    "modal",
-    "dialog",
-    "alert"
+    "message"
   ],
   "author": "Keagan Chisnall",
   "license": "MIT",
@@ -28,9 +25,6 @@
     "url": "https://github.com/xon52/x5-notify/issues"
   },
   "homepage": "https://github.com/xon52/x5-notify#readme",
-  "dependencies": {
-    "vue": "^2.6.11"
-  },
   "files": [
     "dist"
   ],

@@ -1,4 +1,4 @@
-.x5-n-messages {
+.x5-n-notices {
   position: fixed;
   width: 0;
   overflow: visible;
@@ -13,7 +13,7 @@
   &.x5-n-top-left,
   &.x5-n-bottom-left {
     left: 10px;
-    .x5-n-message {
+    .x5-n-notice {
       left: -300px;
       &.x5-n-visible {
         left: 0;
@@ -23,7 +23,7 @@
   &.x5-n-top-right,
   &.x5-n-bottom-right {
     right: 10px;
-    .x5-n-message {
+    .x5-n-notice {
       right: -320px;
       &.x5-n-visible {
         right: 290px;
@@ -32,7 +32,7 @@
   }
 }
 
-.x5-n-message {
+.x5-n-notice {
   border-radius: 10px;
   box-shadow: 3px 3px 8px #0008;
   color: #fff;

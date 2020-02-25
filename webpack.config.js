@@ -4,12 +4,13 @@ const merge = require('webpack-merge')
 const path = require('path')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src',
   output: {
     filename: 'index.js',
     libraryTarget: 'umd',
     library: 'x5-notify',
   },
+  mode: 'production',
   module: {
     rules: [
       {
