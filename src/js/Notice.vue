@@ -33,11 +33,11 @@ export default {
       clearTimeout(this.timeout)
       if (this.options.onClose) this.options.onClose()
       this.visible = false
-      setTimeout(() => this.$emit("close"), 1000)
+      setTimeout(() => this.$emit("close"), 250)
     }
   },
   mounted() {
-    setTimeout(() => (this.visible = true), 100)
+    setTimeout(() => (this.visible = true), 50)
     this.timeout = setTimeout(() => this.close(), this.options.wait * 1000)
   }
 }

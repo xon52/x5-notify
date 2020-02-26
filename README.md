@@ -25,7 +25,7 @@ this.$notify('success', 'You made a success!')
 this.$notify({
   type: 'error',
   text: 'There was an error',
-  wait: 10
+  wait: 10,
 })
 ```
 
@@ -33,10 +33,11 @@ this.$notify({
 
 ### **plugin** _(Vue.use(x5Notify, **options**))_
 
-| Attribute |  Type  |   Default    | Description                                                               |
-| :-------- | :----: | :----------: | :------------------------------------------------------------------------ |
+| Attribute |  Type  |   Default    | Description                                                              |
+| :-------- | :----: | :----------: | :----------------------------------------------------------------------- |
 | position  | String | bottom-right | Origin of notices: `top-right`, `bottom-right`,`top-left`, `bottom-left` |
-| zIndex    | Number |    `200`     | `z-index` style for plugin                                                |
+| zIndex    | Number |    `200`     | `z-index` style for plugin                                               |
+| max       | Number |     `5`      | Maximum number of notices (currently just stops making more)             |
 
 ### **`$notice` (options)** _(returns Promise)_
 
@@ -44,11 +45,11 @@ this.$notify({
 
 | Attribute |   Type   | Default | Description                                                        |
 | :-------- | :------: | :-----: | :----------------------------------------------------------------- |
-| text      |  String  |   --    | Notice text (required)                                            |
+| text      |  String  |   --    | Notice text (required) - **can be HTML**                           |
 | type      |  String  | default | One of `success`, `warning`, `error`, `info`, `special`, `default` |
-| onClose   | Function |   --    | Callback for when the notice is closed                            |
-| onClick   | Function |   --    | Callback for clicking on the notice                               |
-| wait      |  Number  |   `5`   | Time in seconds before notice is destroyed                        |
+| onClose   | Function |   --    | Callback for when the notice is closed                             |
+| onClick   | Function |   --    | Callback for clicking on the notice                                |
+| wait      |  Number  |   `5`   | Time in seconds before notice is destroyed                         |
 
 ## Contributing
 
