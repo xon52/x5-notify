@@ -18,7 +18,7 @@ const x5NVue = new Vue({
       if (this.notices.length >= this.options.max) return
       // Initial notice creation
       let notice = null
-      if (typeof options === 'string') notice = { options: { type: options, text } }
+      if (typeof options === 'string') notice = { options: { ...this.defaultOptions, ...{ type: options, text } } }
       else if (typeof options === 'object') notice = { options: { ...this.defaultOptions, ...options } }
       else throw new Error(`Invalid parameter ${JSON.stringify(options)} used in x5Notify.`)
       // Set key
