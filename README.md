@@ -1,8 +1,10 @@
 # x5 Notify ([Live Demo](https://codesandbox.io/s/x5-notify-example-xozh8?hidenavigation=1&view=preview))
 
-This is a lightweight notice plugin. It does require a [Vuex store](https://vuex.vuejs.org/)
+This is a lightweight notice plugin.
 
 :warning: This plugin is in development, so please let me know if you find any errors.
+
+![Notices](./example/img/messages.png)
 
 ## Installation
 
@@ -12,6 +14,9 @@ npm install x5-notify --save
 ```
 
 ## Deployment
+
+This plugin does require a [Vuex store](https://vuex.vuejs.org/) and can be installed like any Vue plugin in your entry
+point:
 
 ```js
 Vue.use(Vuex)
@@ -31,21 +36,6 @@ bottom of your App.vue template)
 </div>
 ```
 
-## Usage
-
-```js
-this.$notify('success', 'You made a success!')
-this.$notify({
-  type: 'error',
-  text: 'There was an error',
-  wait: 10,
-})
-```
-
-## Options
-
-### **plugin** _(Vue.use(x5Notify, **options**))_
-
 | Attribute |  Type  |   Default    | Description                                                              |
 | :-------- | :----: | :----------: | :----------------------------------------------------------------------- |
 | position  | String | bottom-right | Origin of notices: `top-right`, `bottom-right`,`top-left`, `bottom-left` |
@@ -54,17 +44,34 @@ this.$notify({
 
 :warning: \*`onClose()` callbacks disabled for notices exceeding notice limit.
 
-### **`$notice` (options)** _(returns Promise)_
+<br>
 
-![Notices](./example/img/messages.png)
+# Usage
 
-| Attribute |   Type   | Default | Description                                                        |
-| :-------- | :------: | :-----: | :----------------------------------------------------------------- |
-| text      |  String  |   --    | Notice text (required) - **can be HTML**                           |
-| type      |  String  | default | One of `success`, `warning`, `error`, `info`, `special`, `default` |
-| onClose   | Function |   --    | Callback for when the notice is closed                             |
-| onClick   | Function |   --    | Callback for clicking on the notice                                |
-| wait      |  Number  |   `5`   | Time in seconds before notice is destroyed                         |
+## Quick Method - `this.$notice(type, text)`
+
+```js
+this.$notice('success', 'This is a success notice')
+```
+
+## Full Method: `this.$notice(options)`
+
+```js
+this.$notice({ type: 'success', text: 'This is a success notice', wait: 5 })
+```
+
+| Attribute    |   Type   | Default | Description                                                        |
+| :----------- | :------: | :-----: | :----------------------------------------------------------------- |
+| type         |  String  | default | One of `success`, `warning`, `error`, `info`, `special`, `default` |
+| text         |  String  |   --    | Notice text (required) - **can be HTML**                           |
+| onClose      | Function |   --    | Callback for when the notice is closed                             |
+| onClick      | Function |   --    | Callback for clicking on the notice                                |
+| wait         |  Number  |   `5`   | Time in seconds before notice is destroyed                         |
+| closeOnClick | Boolean  | `true`  | Closes the notice early if clicked                                 |
+
+<br>
+
+---
 
 ## Contributing
 
