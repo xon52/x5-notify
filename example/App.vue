@@ -7,7 +7,7 @@
     </div>
     <div class="row">
       <template v-for="type in types">
-        <button :key="type" class="button" @click="notify(type)">{{type}}</button>
+        <button :key="type" class="button" @click="notify(type)">{{ type }}</button>
       </template>
     </div>
     <div class="line">------------------------</div>
@@ -16,8 +16,9 @@
     <p>This button calls back another everytime you close it.</p>
     <p>A notice has callback properties for onClick() and onClose() events.</p>
     <button class="button" @click="start">Start</button>
-    <button :disabled="stop" class="button" @click="stop=true">Stop</button>
+    <button :disabled="stop" class="button" @click="stop = true">Stop</button>
     <h5>You can click start a few times for a show.</h5>
+    <!-- Plugin Component -->
     <x5-notify></x5-notify>
   </div>
 </template>
@@ -25,31 +26,31 @@
 <script>
 export default {
   data: () => ({
-    text: "This is some example text you can change.",
-    types: ["success", "warning", "error", "info", "special", "default"],
-    stop: true
+    text: 'This is some example text you can change.',
+    types: ['success', 'warning', 'error', 'info', 'special', 'default'],
+    stop: true,
   }),
   methods: {
     notify(type) {
       this.$notify({
         type,
-        text: this.text ? `${this.text}` : type
+        text: this.text ? `${this.text}` : type,
       })
     },
     loop() {
       if (this.stop) return
       this.$notify({
         type: this.types[Math.floor(Math.random() * this.types.length)],
-        text: "Repeating",
+        text: 'Repeating',
         wait: 1,
-        onClose: this.loop
+        onClose: this.loop,
       })
     },
     start() {
       this.stop = false
       this.loop()
-    }
-  }
+    },
+  },
 }
 </script>
 
