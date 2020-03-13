@@ -1,5 +1,8 @@
 # x5 Notify ([Live Demo](https://codesandbox.io/s/x5-notify-example-xozh8?hidenavigation=1&view=preview))
 
+![GitHub file size in bytes](https://img.shields.io/github/size/xon52/x5-notify/dist/index.js)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/x5-notify)
+
 This is a lightweight notice plugin.
 
 :warning: This plugin is in development, so please let me know if you find any errors.
@@ -10,7 +13,7 @@ This is a lightweight notice plugin.
 
 ```bash
 # npm
-npm install x5-notify --save
+npm install x5-notify
 ```
 
 ## Deployment
