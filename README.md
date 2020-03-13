@@ -69,7 +69,7 @@ this.$notice('success', 'This is a success notice')
 this.$notice({ type: 'success', text: 'This is a success notice', wait: 5 })
 ```
 
-| Attribute    |   Type   | Default | Description                                                        |
+| Options      |   Type   | Default | Description                                                        |
 | :----------- | :------: | :-----: | :----------------------------------------------------------------- |
 | type         |  String  | default | One of `success`, `warning`, `error`, `info`, `special`, `default` |
 | text         |  String  |   --    | Notice text (required) - **can be HTML**                           |
