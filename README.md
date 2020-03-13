@@ -14,7 +14,6 @@ npm install x5-notify --save
 ## Deployment
 
 ```js
-// Entry point (e.g. main.js)
 Vue.use(Vuex)
 const store = new Vuex.Store()
 
@@ -26,7 +25,6 @@ This plugin uses a component to house all the magic, so it's recommended to put 
 bottom of your App.vue template)
 
 ```html
-<!-- Somewhere for the component (e.g. App.vue) -->
 <div id="app">
   ...
   <x5-notify></x5-notify>
@@ -52,9 +50,9 @@ this.$notify({
 | :-------- | :----: | :----------: | :----------------------------------------------------------------------- |
 | position  | String | bottom-right | Origin of notices: `top-right`, `bottom-right`,`top-left`, `bottom-left` |
 | zIndex    | Number |    `200`     | `z-index` style for plugin                                               |
-| max     | Number |     `5`      | Limit number of open notices (`0` to remove limit)                       |
+| max       | Number |     `5`      | Limit number of open notices (use `0` to remove limit)\*                 |
 
-:warning: `onClose()` callbacks won't be called on notices closed due to exceeding the maximum number.
+:warning: \*`onClose()` callbacks disabled for notices exceeding notice limit.
 
 ### **`$notice` (options)** _(returns Promise)_
 
