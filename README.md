@@ -27,6 +27,12 @@ const store = new Vuex.Store()
 
 import x5Notify from 'x5-notify'
 Vue.use(x5Notify, store)
+
+new Vue({
+  el: '#app',
+  store: store,
+  render: h => h(App),
+})
 ```
 
 This plugin uses a component to house all the magic, so it's recommended to put this near the end of your Vue app (e.g.
