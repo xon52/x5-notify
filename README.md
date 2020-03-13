@@ -1,6 +1,6 @@
 # x5 Notify ([Live Demo](https://codesandbox.io/s/x5-notify-example-xozh8?hidenavigation=1&view=preview))
 
-This is a lightweight notice plugin.
+This is a lightweight notice plugin. It does require a [Vuex store](https://vuex.vuejs.org/)
 
 :warning: This plugin is in development, so please let me know if you find any errors.
 
@@ -14,8 +14,23 @@ npm install x5-notify --save
 ## Deployment
 
 ```js
+// Entry point (e.g. main.js)
+Vue.use(Vuex)
+const store = new Vuex.Store()
+
 import x5Notify from 'x5-notify'
-Vue.use(x5Notify)
+Vue.use(x5Notify, store)
+```
+
+This plugin uses a component to house all the magic, so it's recommended to put this near the end of your Vue app (e.g.
+bottom of your App.vue template)
+
+```html
+<!-- Somewhere for the component (e.g. App.vue) -->
+<div id="app">
+  ...
+  <x5-notify></x5-notify>
+</div>
 ```
 
 ## Usage
@@ -37,7 +52,9 @@ this.$notify({
 | :-------- | :----: | :----------: | :----------------------------------------------------------------------- |
 | position  | String | bottom-right | Origin of notices: `top-right`, `bottom-right`,`top-left`, `bottom-left` |
 | zIndex    | Number |    `200`     | `z-index` style for plugin                                               |
-| max       | Number |     `5`      | Maximum number of notices (currently just stops making more)             |
+| max     | Number |     `5`      | Limit number of open notices (`0` to remove limit)                       |
+
+:warning: `onClose()` callbacks won't be called on notices closed due to exceeding the maximum number.
 
 ### **`$notice` (options)** _(returns Promise)_
 

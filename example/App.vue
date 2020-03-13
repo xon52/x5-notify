@@ -18,6 +18,7 @@
     <button class="button" @click="start">Start</button>
     <button :disabled="stop" class="button" @click="stop=true">Stop</button>
     <h5>You can click start a few times for a show.</h5>
+    <x5-notify></x5-notify>
   </div>
 </template>
 
