@@ -10,7 +10,7 @@ const defaults = {
   wait: 5,
 }
 
-export default function(Vue, store) {
+export default function (Vue, store) {
   // Register Vuex store
   if (!store) throw new Error('A Vuex store is required by the x5Notify plugin')
   store.registerModule('x5/n', PluginStore)

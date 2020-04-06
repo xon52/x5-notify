@@ -3,6 +3,21 @@
     <div class="center">
       <img class="logo" src="./logo.svg" width="300" />
       <h1 class="title">x5-Notify Example</h1>
+      <!-- Position -->
+      <div class="line">------------------------</div>
+      <h2>Notifications' Position Property</h2>
+      <table style="margin:0 auto;">
+        <template v-for="y in yPositions">
+          <tr :key="y">
+            <template v-for="x in xPositions">
+              <button :key="x" style="width:110px;" :style="position === `${y}-${x}` ? 'background:lightblue;' : ''" @click="position = `${y}-${x}`">{{ `${y}-${x}` }}</button>
+            </template>
+          </tr>
+        </template>
+      </table>
+      <!-- Types -->
+      <div class="line">------------------------</div>
+      <h2>Types</h2>
       <div class="row">
         <textarea id="text-input" v-model="text" rows="2" cols="40"></textarea>
       </div>
@@ -26,7 +41,7 @@
       <h5>You can click start a few times for a show.</h5>
     </div>
     <!-- Plugin Component -->
-    <x5-notify></x5-notify>
+    <x5-notify :position="position"></x5-notify>
   </div>
 </template>
 
@@ -35,6 +50,9 @@ export default {
   data: () => ({
     text: 'This is some example text you can change.',
     types: ['success', 'warning', 'error', 'info', 'special', 'default'],
+    xPositions: ['left', 'center', 'right'],
+    yPositions: ['top', 'center', 'bottom'],
+    position: 'bottom-right',
     stop: true
   }),
   methods: {

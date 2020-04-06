@@ -2,26 +2,29 @@
   position: fixed;
   width: 0;
   overflow: visible;
-  &.x5-n-top-left,
-  &.x5-n-top-right {
+  &.x5-n-top {
     top: 0;
   }
-  &.x5-n-bottom-left,
-  &.x5-n-bottom-right {
-    bottom: 10px;
+  &.x5-n-bottom {
+    bottom: 0;
   }
-  &.x5-n-top-left,
-  &.x5-n-bottom-left {
-    left: 10px;
+  &.x5-n-y-center {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &.x5-n-left {
+    left: 0;
+  }
+  &.x5-n-right {
+    right: 0;
     .x5-n-notice {
-      left: 0;
+      right: 310px;
     }
   }
-  &.x5-n-top-right,
-  &.x5-n-bottom-right {
-    right: 10px;
+  &.x5-n-x-center {
+    left: 50%;
     .x5-n-notice {
-      right: 290px;
+      transform: translateX(-50%);
     }
   }
 }
@@ -32,8 +35,9 @@
   color: #fff;
   cursor: pointer;
   font-size: 20px;
-  margin-top: 10px;
+  margin: 10px;
   max-height: 100%;
+  overflow: hidden;
   padding: 15px;
   position: relative;
   text-shadow: 1px 1px 2px #0008;

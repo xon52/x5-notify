@@ -31,7 +31,7 @@ Vue.use(x5Notify, store)
 new Vue({
   el: '#app',
   store: store,
-  render: h => h(App),
+  render: (h) => h(App),
 })
 ```
 
@@ -45,13 +45,15 @@ bottom of your App.vue template)
 </div>
 ```
 
-| Attribute |  Type  |   Default    | Description                                                              |
-| :-------- | :----: | :----------: | :----------------------------------------------------------------------- |
-| position  | String | bottom-right | Origin of notices: `top-right`, `bottom-right`,`top-left`, `bottom-left` |
-| zIndex    | Number |    `200`     | `z-index` style for plugin                                               |
-| max       | Number |     `5`      | Limit number of open notices (use `0` to remove limit)\*                 |
+| Attribute |  Type  |   Default    | Description                                                |
+| :-------- | :----: | :----------: | :--------------------------------------------------------- |
+| position  | String | bottom-right | Origin of notices - see options below\*                    |
+| zIndex    | Number |    `200`     | `z-index` style for plugin                                 |
+| max       | Number |     `5`      | Limit number of open notices (use `0` to remove limit)\*\* |
 
-:warning: \*`onClose()` callbacks disabled for notices exceeding notice limit.
+:info: \* Positions options: `top-left`, `top-center`, `top-right`, `center-left`, `center-center`, `center-right`, `bottom-left`, `bottom-center`, `bottom-right`
+
+:warning: \*\* `onClose()` callbacks disabled for notices exceeding notice limit.
 
 <br>
 
@@ -89,13 +91,13 @@ Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for the process for submitting 
 
 ## Authors
 
-- **Keagan Chisnall** - [xon52](https://github.com/xon52)
+- [Keagan Chisnall](https://github.com/xon52)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
+## Acknowledgements
 
 **Inspired by:**
 
