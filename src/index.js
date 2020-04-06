@@ -6,6 +6,7 @@ const defaults = {
   closeOnClick: true,
   onClick: () => {},
   onClose: () => {},
+  onClickText: '(click to dismiss)',
   wait: 5,
 }
 

@@ -4,7 +4,7 @@
   overflow: visible;
   &.x5-n-top-left,
   &.x5-n-top-right {
-    top: 10px;
+    top: 0;
   }
   &.x5-n-bottom-left,
   &.x5-n-bottom-right {
@@ -37,7 +37,7 @@
   padding: 15px;
   position: relative;
   text-shadow: 1px 1px 2px #0008;
-  width: 290px;
+  width: 260px;
   &.x5-n-default {
     background-color: $colors_default;
   }
@@ -56,7 +56,7 @@
   &.x5-n-info {
     background-color: $colors_info;
   }
-  .x5-n-click-to-dismiss {
+  .x5-n-on-click-text {
     position: absolute;
     bottom: 5px;
     right: 10px;

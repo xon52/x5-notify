@@ -69,14 +69,15 @@ this.$notice('success', 'This is a success notice')
 this.$notice({ type: 'success', text: 'This is a success notice', wait: 5 })
 ```
 
-| Options      |   Type   | Default | Description                                                        |
-| :----------- | :------: | :-----: | :----------------------------------------------------------------- |
-| type         |  String  | default | One of `success`, `warning`, `error`, `info`, `special`, `default` |
-| text         |  String  |   --    | Notice text (required) - **can be HTML**                           |
-| onClose      | Function |   --    | Callback for when the notice is closed                             |
-| onClick      | Function |   --    | Callback for clicking on the notice                                |
-| wait         |  Number  |   `5`   | Time in seconds before notice is destroyed                         |
-| closeOnClick | Boolean  | `true`  | Closes the notice early if clicked                                 |
+| Options      |   Type   |       Default        | Description                                                        |
+| :----------- | :------: | :------------------: | :----------------------------------------------------------------- |
+| type         |  String  |       default        | One of `success`, `warning`, `error`, `info`, `special`, `default` |
+| text         |  String  |          --          | Notice text (required) - **can be HTML**                           |
+| onClose      | Function |          --          | Callback for when the notice is closed                             |
+| onClick      | Function |          --          | Callback for clicking on the notice                                |
+| onClickText  |  String  | "(click to dismiss)" | Description of click action (bottom right hand corner)             |
+| wait         |  Number  |         `5`          | Time in seconds before notice is destroyed                         |
+| closeOnClick | Boolean  |        `true`        | Closes the notice early if clicked                                 |
 
 <br>
 
