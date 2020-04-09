@@ -1,4 +1,4 @@
-# x5 Notify ([Live Demo](https://codesandbox.io/s/x5-notify-example-xozh8?hidenavigation=1&view=preview))
+# x5 Notify ([Live Demo](https://xon52.github.io/x5-notify/))
 
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/x5-notify)
 
