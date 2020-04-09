@@ -13,9 +13,6 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "core-js": "^3.6.4"
-  },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.3.1",
     "@vue/cli-plugin-eslint": "~4.3.0",
