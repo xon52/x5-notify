@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="center">
-      <img class="logo" src="./logo.svg" width="300" />
+      <img class="logo" src="./img/logo.svg" width="300" />
       <h1 class="title">x5-Notify Example</h1>
       <!-- Position -->
       <div class="line">------------------------</div>
