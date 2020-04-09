@@ -6,7 +6,7 @@ This is a lightweight notice plugin.
 
 :warning: This plugin is in development, so please let me know if you find any errors.
 
-![Notices](./example/img/messages.png)
+![Notices](./README/messages.png)
 
 ## Installation
 
