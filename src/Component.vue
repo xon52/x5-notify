@@ -1,5 +1,10 @@
 <template>
-  <transition-group :name="transitionName" tag="div" :class="`x5-n-notices ${positionClass}`" :style="`z-index:${zIndex}`">
+  <transition-group
+    :name="transitionName"
+    tag="div"
+    :class="`x5-n-notices ${positionClass}`"
+    :style="`z-index:${zIndex}`"
+  >
     <x5-notice :notice="n" :key="n.key" v-for="n in notices" />
   </transition-group>
 </template>
@@ -21,7 +26,11 @@ export default {
       return this.$store.getters['x5/n/notices']
     },
     transitionName() {
-      return this.position.includes('-left') ? 'x5-n-slide-left' : this.position.includes('-center') ? 'x5-n-slide-center' : 'x5-n-slide-right'
+      return this.position.includes('-left')
+        ? 'x5-n-slide-left'
+        : this.position.includes('-center')
+        ? 'x5-n-slide-center'
+        : 'x5-n-slide-right'
     },
     positionClass() {
       const xPos = this.position.includes('-left') ? 'left' : this.position.includes('-center') ? 'x-center' : 'right'

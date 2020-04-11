@@ -5,14 +5,14 @@ module.exports = {
   output: {
     filename: 'index.js',
     libraryTarget: 'umd',
-    library: 'x5-notify',
+    library: 'x5-notify'
   },
   mode: 'production',
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
+        loader: 'vue-loader'
       },
       {
         test: /\.s[ac]ss$/i,
@@ -22,13 +22,13 @@ module.exports = {
           // Translates CSS into CommonJS
           'css-loader',
           // Compiles Sass to CSS
-          'sass-loader',
-        ],
-      },
-    ],
+          'sass-loader'
+        ]
+      }
+    ]
   },
   externals: {
-    vue: 'vue',
+    vue: 'vue'
   },
-  plugins: [new VueLoaderPlugin()],
+  plugins: [new VueLoaderPlugin()]
 }

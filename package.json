@@ -1,6 +1,6 @@
 {
   "name": "x5-notify",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "private": false,
   "description": "A lightweight notice plugin for Vue",
   "author": "Keagan Chisnall",
