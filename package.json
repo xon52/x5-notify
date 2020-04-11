@@ -1,12 +1,13 @@
 {
   "name": "x5-notify",
-  "version": "0.3.4",
+  "version": "0.3.6",
   "private": false,
   "description": "A lightweight notice plugin for Vue",
   "author": "Keagan Chisnall",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "drydeploy": "rimraf dist && webpack",
     "deploy": "rimraf dist && webpack && npx publish"
   },
   "main": "dist",
@@ -30,7 +31,7 @@
     "vue-loader": "^15.9.1",
     "vue-template-compiler": "^2.6.11",
     "vuex": "^3.1.3",
-    "webpack": "^4.42.0",
+    "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
   "bugs": {

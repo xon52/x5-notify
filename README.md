@@ -54,6 +54,14 @@ bottom of your App.vue template)
 
 :warning: \*\* `onClose()` callbacks disabled for notices exceeding notice limit.
 
+:warning: This plugin is not transpiled! If you want to include it for use on IE or Edge, you need to add this to your `vue.config.js` file:
+```js
+module.exports = {
+  transpileDependencies: ['x5-notify']
+}
+```
+
+
 <br>
 
 # Usage
