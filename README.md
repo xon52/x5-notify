@@ -66,16 +66,16 @@ module.exports = {
 
 # Usage
 
-## Quick Method - `this.$notice(type, text)`
+## Quick Method - `this.$notify(type, text)`
 
 ```js
-this.$notice('success', 'This is a success notice')
+this.$notify('success', 'This is a success notice')
 ```
 
-## Full Method: `this.$notice(options)`
+## Full Method: `this.$notify(options)`
 
 ```js
-this.$notice({ type: 'success', text: 'This is a success notice', wait: 5 })
+this.$notify({ type: 'success', text: 'This is a success notice', wait: 5 })
 ```
 
 | Options      |   Type   |       Default        | Description                                                        |
