@@ -18,8 +18,8 @@ export default function(Vue, store) {
   Vue.component('x5Notify', Component)
   // Create hook on main vue
   Vue.prototype.$notify = (options, text) => {
-    let notices = store.getters['x5/n/notices']
-    let max = store.getters['x5/n/max']
+    const notices = store.getters['x5/n/notices']
+    const max = store.getters['x5/n/max']
     // Early return if too many notices
     if (max > 0 && notices.length >= max) notices[0].forceClose()
     // Initial notice creation with defaults
